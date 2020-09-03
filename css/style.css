@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Good Times Regular", sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 .wrapper {
@@ -71,6 +71,7 @@ h3 {
   font-size: 50px;
   letter-spacing: 1px;
   margin-bottom: 1rem;
+  color: #ffa500;
 }
 
 #timer {
@@ -91,6 +92,18 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ffa500;
   font-size: 30px;
+}
+
+.resultTable th,
+.resultTable td {
+  padding: 10px 20px;
+}
+
+.resultTable th {
+  color: #cf0699;
+}
+
+.resultTable td {
+  color: #ffa500;
 }

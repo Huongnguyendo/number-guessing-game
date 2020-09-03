@@ -1,10 +1,3 @@
-// 1. only 3 chances
-// 2. number out of range
-// 3. check history
-// 4. number already typed
-// 5. timer
-// 6.  reset
-
 let timer; // time counting var
 let secretNumber = Math.ceil(Math.random() * 100);
 console.log(secretNumber);
@@ -73,17 +66,7 @@ function guessNumber() {
 
   document.getElementById("status").innerHTML = result;
 
-  // when out of guess and yet win
-  //   if (guessesRemaining == 0 && win == false) {
-  //     setTimeout(function () {
-  //       document.getElementById("status").innerHTML = "Game over!";
-  //     }, 100);
-  //     document.getElementById("guessBtn").disabled = true;
-  //     // freeze timer
-  //     clearInterval(timer);
-  //     return;
-  //   }
-
+  // when out of guess and yet won
   if (guessesRemaining == 0 && win == false) {
     playerLoose();
     return;
@@ -168,46 +151,6 @@ $("#reset").click(function () {
 
   document.getElementById("successAlert").style.display = "none";
 });
-
-// timeout
-// function timeOut() {
-//     var timeoutHandle;
-//     function countdown(minutes, seconds) {
-//         function tick() {
-//             var counter = document.getElementById("timer");
-//             counter.innerHTML =
-//                 minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-//             seconds--;
-//             if (seconds >= 0) {
-//                 timeoutHandle = setTimeout(tick, 1000);
-//             } else {
-//                 if (minutes >= 1) {
-//                     // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
-//                     setTimeout(function () {
-//                         countdown(minutes - 1, 59);
-//                     }, 1000);
-//                 }
-//             }
-//         }
-//         tick();
-//     }
-
-//     countdown(1, 30);
-// }
-
-// function timeOut() {
-//   let counter = 15;
-
-//   const interval = setInterval(() => {
-//     document.getElementById("timer").innerHTML = counter;
-//     counter--;
-
-//     if (counter < 0) {
-//       clearInterval(interval);
-//       document.getElementById("timer").innerHTML = "Ding!";
-//     }
-//   }, 1000);
-// }
 
 function timeOut() {
   let time = 15;
